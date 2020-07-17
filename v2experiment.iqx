@@ -1,0 +1,250 @@
+﻿-----Some default settings-----
+<defaults>
+/ windowsize = (50%, 50%)
+</defaults>
+-----Loading Pictures as Items-----
+<item redFlowerContrast >
+/ 1 = "EZ170_+10.bmp"
+/ 2 = "DD042_L.jpg"
+/ 3 = "EZ099_L.jpg"
+</item>
+
+<item PracticeFlowerSet>
+/ 1 = "EZ032_L.jpg"
+</item>
+
+
+<page summary>
+^^Thank you for your participation. Please press 'SPACE bar' to end the test.
+</page>
+
+<text instructions>
+/ items = ("Welcome to the DPDR Test. Before the real test, you will be presented with a practice trial. Press the SPACE BAR to begin practice")
+/ hjustify = left
+/ size = (90%, 60%)
+/ position = (50%, 85%)
+/ valign = bottom
+/ select = instructions
+/ fontstyle = ("Arial", 3.5%)
+</text>
+
+<radiobuttons q1>
+/ options = (" 4 (Very real)", " 3 (Moderately real)", " 2 (More real)"," 1 (Slightly real)","-1 (Slightly fake)","-2 (More fake)","-3 (Moderately fake)","-4 (Very fake)")
+/ orientation = vertical
+/ position = (10%,25%)
+/ required = true
+</radiobuttons>
+
+<surveypage realness>
+/ caption = "Select an answer to describe the 'realness' of the previous picture"
+/ orientation = horizontal
+/ fontstyle = ("Verdana", 5%, false, false, false, false, 5, 1)
+/ questions = [1=q1] 
+</surveypage>
+
+<text PracticeText>
+/items = ("At the beginning of the trial, a picture will flash briefly (similar to that shown below). Immediately following that, you will be asked to rate its realness. Press SPACE BAR to continue")
+/ hjustify = left
+/ size = (90%, 60%)
+/ position = (50%, 85%)
+/ valign = bottom
+/ select = instructions
+/ fontstyle = ("Arial", 3.5%)
+</text>
+
+<text PostPracticeText>
+/ items = ("You have now completed the practice test. Press SPACE BAR to begin the real test")
+/ hjustify = left
+/ size = (90%, 60%)
+/ position = (50%, 85%)
+/ valign = bottom
+/ select = instructions
+/ fontstyle = ("Arial", 3.5%)
+</text>
+
+
+<picture flower>
+/ items = redFlowerContrast
+/ size = (50%, 50%)
+</picture>
+
+<picture Practiceflower>
+/items = PracticeFlowerSet
+/ select =  sequence
+/ size = (45%, 45%)
+/ position = (50%, 60%)
+</picture>
+
+
+<trial Instruct>
+/ stimulusframes = [1 = instructions]
+/ correctresponse = (" ")
+/ posttrialpause = 300
+</trial>
+
+<trial Practice1>
+/ stimulusframes = [1 = PracticeText; 2 = Practiceflower]
+/ correctresponse = (" ")
+/ posttrialpause = 300
+
+</trial>
+
+<trial PostPractice>
+/ stimulusframes = [1 = PostPracticeText]
+/ correctresponse = (" ")
+/ posttrialpause = 300
+</trial>
+
+
+<trial PracticeFlower>
+/ stimulusframes = [1 = flower]
+/ timeout = 1000
+/ posttrialpause = 300
+</trial>
+
+
+<trial FLOWER>
+/ stimulusframes = [1 = flower;]
+/ timeout = 1000
+/ posttrialpause = 300
+</trial>
+
+-----Drop Down Options for DPDR Test-----
+NOTE: At this stage, The frequency and duration dropdown boxes need to be changed for every question (i.e. 54 separate dropdowns for the whole quiz)
+this is obviously too large, but I am not sure how else to organise it. I will think about it more. 
+
+<dropdown frequency1 >
+/ caption = "Frequency: Out of the blue, I feel strange, as if I were not real or as if I were cut off from the world"
+/ options = ("Never","Rarely","Often","Very Often","All the Time")
+/ optionvalues = ("0","1","2","3","4")
+
+</dropdown>
+
+<dropdown duration1>
+/ caption = "Duration: Out of the blue, I feel strange, as if I were not real or as if I were cut off from the world"
+/ options = ("Not Applicable","A Few Seconds", "A Few Minutes","A Few Hours","About a Day","More Than a Day", "More Than a Week")
+/ optionvalues = ("0","1","2","3","4","5","6")
+</dropdown>
+
+<dropdown frequency2 >
+/ caption = "Frequency: What I see looks 'flat' or 'lifeless', as if I were looking at a picture"
+/ options = ("Never","Rarely","Often","Very Often","All the Time")
+/ optionvalues = ("0","1","2","3","4")
+</dropdown>
+
+<dropdown duration2>
+/ caption = "Duration: What I see looks 'flat' or 'lifeless', as if I were looking at a picture"
+/ options = ("Not Applicable","A Few Seconds", "A Few Minutes","A Few Hours","About a Day","More Than a Day", "More Than a Week")
+/ optionvalues = ("0","1","2","3","4","5","6")
+</dropdown>
+
+<dropdown frequency3 >
+/ caption = "Frequency: Parts of my body feel as if they didn't belong to me"
+/ options = ("Never","Rarely","Often","Very Often","All the Time")
+/ optionvalues = ("0","1","2","3","4")
+</dropdown>
+
+<dropdown duration3>
+/ caption = "Duration: Parts of my body feel as if they didn't belong to me"
+/ options = ("Not Applicable","A Few Seconds", "A Few Minutes","A Few Hours","About a Day","More Than a Day", "More Than a Week")
+/ optionvalues = ("0","1","2","3","4","5","6")
+</dropdown>
+
+<surveypage DPDR>
+/ caption = "Please answer the following items to the best of your ability"
+/ questions = [1=dropdown.frequency1,dropdown.duration1; 2 = dropdown.frequency2, dropdown.duration2; 3 = dropdown.frequency3, dropdown.duration3]
+</surveypage>
+
+
+----- FROM ARIEL'S EXPERIMENT-----
+
+<picture response1d>
+/ items = ("response1disks.png")
+/ position = ( 20%,20%)
+/ size = (15.8%,15.8%)
+</picture>
+
+<picture response2d>
+/ items = ("response2disks.png")
+/ position = (30%,20%)
+/ size = (15.8%,15.8%)
+</picture>
+
+<picture response3d>
+/ items = ("response3disks.png")
+/ position = (40%,20%)
+/ size = (15.8%,15.8%)
+</picture>
+
+<picture response4d>
+/ items = ("response4disks.png")
+/ position = (50%,20%)
+/ size = (15.8%,15.8%)
+</picture>
+
+<picture response5d>
+/ items = ("response5disks.png")
+/ position = (60%,20%)
+/ size = (15.8%,15.8%)
+</picture>
+
+<picture response6d>
+/ items = ("response6disks.png")
+/ position = (70%,20%)
+/ size = (15.8%,15.8%)
+</picture>
+
+<picture response7d>
+/ items = ("response7disks.png")
+/ position = (80%,20%)
+/ size = (15.8%,15.8%)
+</picture>
+
+<picture response8d>
+/ items = ("response8disks.png")
+/ position = (20%,40%)
+/ size = (15.8%,15.8%)
+</picture>
+
+<picture response_blank>
+/ items = ("response_blank.png")
+/ position = (30%,40%)
+/ size = (15.8%,15.8%)
+</picture>
+
+<shape greensquare>
+/ size = (10%, 10%)
+/ position = (50%, 50%)
+/ shape = circle
+/ color = green
+</shape>
+
+
+<trial peripheral_response_practice>
+/ stimulusframes = [1  = response1d, response2d, response3d, response4d, response5d, response6d, response7d, response8d, response_blank]
+/ validresponse = (response_blank, response1d, response2d, response3d, response4d, response5d, response6d, response7d, response8d)
+/ inputdevice = mouse
+/ branch = [
+	trial.centermouse_practice
+]
+</trial>
+
+<trial centermouse_practice>
+/ stimulusframes = [1  = response1d, response2d, response3d, response4d, response5d, response6d, response7d, response8d, greensquare]
+/ inputdevice = mouse
+/ recorddata = false
+/ validresponse = (greensquare)
+</trial>
+
+<trial EndPracticeTrial>
+/ stimulusframes = [1 = PracticeText]
+/ timeout = 20000
+</trial>
+
+
+-----ARIEL'S STUFF END-----
+
+<block test>
+/ trials = [1=Instruct; 2 = Practice1; 3 = peripheral_response_practice; 4 = replace(realness); 5 = PostPractice; 6,8,10 = noreplace(FLOWER); 7,9,11 = noreplace(realness); 12 = surveypage.DPDR]
+/ postinstructions = (summary)
+</block>

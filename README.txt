@@ -1,0 +1,1 @@
+Download all of the stimuli files (pictures of flowers) as well as the inquisit code file (v2experiment.iqx). 
