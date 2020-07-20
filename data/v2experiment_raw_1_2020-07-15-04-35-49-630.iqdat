@@ -1,0 +1,6 @@
+date	time	group	subject	session	build	blocknum	trialnum	blockcode	trialcode	pretrialpause	posttrialpause	trialduration	trialtimeout	response	correct	latency	stimulusnumber1	stimulusitem1	stimulusonset1
+2020-07-15	14:35:49	1	1	1	6.2.1	1	1	test	Instruct	0	300	0	0	57	1	1329	1	This is an instruction. Press the SPACE BAR to begin	50
+2020-07-15	14:35:49	1	1	1	6.2.1	1	2	test	FLOWER	0	300	0	0	0	0	500	2	DD042_L.jpg	4
+2020-07-15	14:35:49	1	1	1	6.2.1	1	3	test	q1	0	0	0	0	-4 (Very fake)	1	8926	0	0	0
+2020-07-15	14:35:49	1	1	1	6.2.1	1	4	test	FLOWER	0	300	0	0	0	0	500	1	EZ170_+10.bmp	6
+2020-07-15	14:35:49	1	1	1	6.2.1	1	5	test	q1	0	0	0	0	-4 (Very fake)	1	2446	0	0	0

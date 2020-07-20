@@ -1,0 +1,18 @@
+date	time	group	subject	session	build	blocknum	trialnum	blockcode	trialcode	pretrialpause	posttrialpause	trialduration	trialtimeout	response	correct	latency	stimulusnumber1	stimulusitem1	stimulusonset1	stimulusnumber2	stimulusitem2	stimulusonset2	stimulusnumber3	stimulusitem3	stimulusonset3	stimulusnumber4	stimulusitem4	stimulusonset4	stimulusnumber5	stimulusitem5	stimulusonset5	stimulusnumber6	stimulusitem6	stimulusonset6	stimulusnumber7	stimulusitem7	stimulusonset7	stimulusnumber8	stimulusitem8	stimulusonset8	stimulusnumber9	stimulusitem9	stimulusonset9
+2020-07-20	10:19:19	1	1	1	6.2.1	1	1	test	Instruct	0	300	0	0	57	1	779	1	Welcome to the DPDR Test. Before the real test, you will be presented with a practice trial. Press the SPACE BAR to begin practice	18	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2020-07-20	10:19:19	1	1	1	6.2.1	1	2	test	Practice1	0	300	0	0	57	1	527	1	At the beginning of the trial, a picture will flash briefly (similar to that shown below). Immediately following that, you will be asked to rate its realness. Press SPACE BAR to continue	0	1	EZ032_L.jpg	16	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2020-07-20	10:19:19	1	1	1	6.2.1	1	3	test	peripheral_response_practice	0	0	0	0	response_blank	0	938	1	response1disks.png	1	1	response2disks.png	1	1	response3disks.png	1	1	response4disks.png	1	1	response5disks.png	1	1	response6disks.png	1	1	response7disks.png	1	1	response8disks.png	1	1	response_blank.png	1
+2020-07-20	10:19:19	1	1	1	6.2.1	1	5	test	q1	0	0	0	0	-3 (Moderately fake)	1	3454	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2020-07-20	10:19:19	1	1	1	6.2.1	1	6	test	PostPractice	0	300	0	0	57	1	4714	1	You have now completed the practice test. Press SPACE BAR to begin the real test	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2020-07-20	10:19:19	1	1	1	6.2.1	1	7	test	FLOWER	0	300	0	0	0	0	1000	2	DD042_L.jpg	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2020-07-20	10:19:19	1	1	1	6.2.1	1	8	test	q1	0	0	0	0	-1 (Slightly fake)	1	1643	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2020-07-20	10:19:19	1	1	1	6.2.1	1	9	test	FLOWER	0	300	0	0	0	0	1000	1	EZ170_+10.bmp	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2020-07-20	10:19:19	1	1	1	6.2.1	1	10	test	q1	0	0	0	0	 1 (Slightly real)	1	1504	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2020-07-20	10:19:19	1	1	1	6.2.1	1	11	test	FLOWER	0	300	0	0	0	0	1000	3	EZ099_L.jpg	2	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2020-07-20	10:19:19	1	1	1	6.2.1	1	12	test	q1	0	0	0	0	 1 (Slightly real)	1	1178	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2020-07-20	10:19:19	1	1	1	6.2.1	1	13	test	frequency1	0	0	0	0	2	1	10947	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2020-07-20	10:19:19	1	1	1	6.2.1	1	13	test	duration1	0	0	0	0	2	1	10947	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2020-07-20	10:19:19	1	1	1	6.2.1	1	13	test	frequency2	0	0	0	0	2	1	10947	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2020-07-20	10:19:19	1	1	1	6.2.1	1	13	test	duration2	0	0	0	0	1	1	10947	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2020-07-20	10:19:19	1	1	1	6.2.1	1	13	test	frequency3	0	0	0	0	2	1	10947	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+2020-07-20	10:19:19	1	1	1	6.2.1	1	13	test	duration3	0	0	0	0	1	1	10947	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0

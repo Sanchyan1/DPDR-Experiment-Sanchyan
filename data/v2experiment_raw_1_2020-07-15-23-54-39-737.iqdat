@@ -1,0 +1,2 @@
+date	time	group	subject	session	build	blocknum	trialnum	blockcode	trialcode	pretrialpause	posttrialpause	trialduration	trialtimeout	response	correct	latency	stimulusnumber1	stimulusitem1	stimulusonset1
+2020-07-16	09:54:39	1	1	1	6.2.1	1	1	test	Instruct	0	300	0	0	abort	1	2991	1	This is an instruction. Press the SPACE BAR to begin	18
