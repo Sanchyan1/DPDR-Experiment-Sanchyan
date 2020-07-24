@@ -109,7 +109,8 @@ EXPERIMENTAL SET-UP
 
 	The purpose of this experiment is to evaluate the quality of different cameras. 
 	A series of flowers (and other pictures) taken by different cameras will be presented on the screen, and your task is to evaluate how real each picture looks. 
-	Before the real trial, you will be presented with 1 practice trial. Before beginning, it is important you:
+	Before the real trial, you will be presented with 1 practice trial. It is important to also note there will be a few trials throughout the test that have special (different) instructions. 
+	Please be aware of them. Before beginning, it is important you:
 	
 	1. Turn off all light sources in the room and make the room as dark as you can 
 	
@@ -122,7 +123,7 @@ EXPERIMENTAL SET-UP
 	Press CTRL + Q anytime throughout the experiment to quit")
 / hjustify = center
 / size = (90%, 60%)
-/ position = (50%, 80%)
+/ position = (50%, 70%)
 / valign = bottom
 / select = instructions
 / fontstyle = ("Arial", 3.5%)
@@ -187,6 +188,14 @@ EXPERIMENTAL SET-UP
 / position = (50%, 60%)
 </picture>
 
+<picture Practice_Catch_Flower>
+/items = PracticeFlower
+/ select =  sequence
+/ size = (50%, 50%)
+/ position = (50%, 50%)
+</picture>
+
+
 <picture Real_Practiceflower>
 / items = Real_Practiceflower
 / size = (50%,50%)
@@ -194,7 +203,7 @@ EXPERIMENTAL SET-UP
 </picture>
 
 <trial CatchTrialFlower>
-/ stimulusframes = [1 = Practiceflower]
+/ stimulusframes = [1 = Practice_Catch_Flower]
 / timeout = 1000
 / posttrialpause = 300
 </trial>
@@ -205,7 +214,7 @@ EXPERIMENTAL SET-UP
 / fontstyle = ("Arial", 2.5%)
 / txbgcolor = black
 / position = (50%, 20%)
-/ color = orange
+/ color = aqua
 </text>
 
 <text CatchText2>
@@ -213,7 +222,7 @@ EXPERIMENTAL SET-UP
 / fontstyle = ("Arial", 2.5%)
 / txbgcolor = black
 / position = (50%, 20%)
-/ color = orange
+/ color = aqua
 </text>
 
 ----- Trial Counter ----
@@ -297,352 +306,410 @@ this is obviously too large, but I am not sure how else to organise it. I will t
 / options = ("Never","Rarely","Often","Very Often","All the Time")
 / optionvalues = ("0","1","2","3","4")
 / position = (49%, 20%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown duration_1>  // Feeling unreal or cut off from the world 
 / options = ("Not Applicable","A Few Seconds", "A Few Minutes","A Few Hours","About a Day","More Than a Day", "More Than a Week")
 / optionvalues = ("0","1","2","3","4","5","6")
-/ position = (70%, 20%)
+/ position = (69%, 20%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown frequency_2> // Things look flat, as if looking at a picture
 / options = ("Never","Rarely","Often","Very Often","All the Time")
 / optionvalues = ("0","1","2","3","4")
 / position = (49%, 27%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown duration_2> // Things look flat, as if looking at a picture
 / options = ("Not Applicable","A Few Seconds", "A Few Minutes","A Few Hours","About a Day","More Than a Day", "More Than a Week")
 / optionvalues = ("0","1","2","3","4","5","6")
-/ position = (70%, 27%)
+/ position = (69%, 27%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown frequency_3> // Body feels as if it didn’t belong to oneself
 / options = ("Never","Rarely","Often","Very Often","All the Time")
 / optionvalues = ("0","1","2","3","4")
 / position = (49%, 34%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown duration_3> // Body feels as if it didn’t belong to oneself
 / options = ("Not Applicable","A Few Seconds", "A Few Minutes","A Few Hours","About a Day","More Than a Day", "More Than a Week")
 / optionvalues = ("0","1","2","3","4","5","6")
-/ position = (70%, 34%)
+/ position = (69%, 34%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown frequency_4> // Not feeling frightened in normally frightening situations
 / options = ("Never","Rarely","Often","Very Often","All the Time")
 / optionvalues = ("0","1","2","3","4")
 / position = (49%, 41%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown duration_4> // Not feeling frightened in normally frightening situations
 / options = ("Not Applicable","A Few Seconds", "A Few Minutes","A Few Hours","About a Day","More Than a Day", "More Than a Week")
 / optionvalues = ("0","1","2","3","4","5","6")
-/ position = (70%, 41%)
+/ position = (69%, 41%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown frequency_5> // Favourite activities no longer enjoyable
 / options = ("Never","Rarely","Often","Very Often","All the Time")
 / optionvalues = ("0","1","2","3","4")
 / position = (49%, 49%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown duration_5> // Favourite activities no longer enjoyable
 / options = ("Not Applicable","A Few Seconds", "A Few Minutes","A Few Hours","About a Day","More Than a Day", "More Than a Week")
 / optionvalues = ("0","1","2","3","4","5","6")
-/ position = (70%, 49%)
+/ position = (69%, 49%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown frequency_6> // Feeling of being a detached observer of oneself
 / options = ("Never","Rarely","Often","Very Often","All the Time")
 / optionvalues = ("0","1","2","3","4")
 / position = (49%, 56%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown duration_6> // Feeling of being a detached observer of oneself
 / options = ("Not Applicable","A Few Seconds", "A Few Minutes","A Few Hours","About a Day","More Than a Day", "More Than a Week")
 / optionvalues = ("0","1","2","3","4","5","6")
-/ position = (70%, 56%)
+/ position = (69%, 56%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown frequency_7> // Flavour of meals no longer gives a feeling of pleasure or distaste
 / options = ("Never","Rarely","Often","Very Often","All the Time")
 / optionvalues = ("0","1","2","3","4")
 / position = (49%, 65%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown duration_7> // Flavour of meals no longer gives a feeling of pleasure or distaste
 / options = ("Not Applicable","A Few Seconds", "A Few Minutes","A Few Hours","About a Day","More Than a Day", "More Than a Week")
 / optionvalues = ("0","1","2","3","4","5","6")
-/ position = (70%, 65%)
+/ position = (69%, 65%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown frequency_8> // Body feels very light, as if it were floating on air
 / options = ("Never","Rarely","Often","Very Often","All the Time")
 / optionvalues = ("0","1","2","3","4")
 / position = (49%, 74%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown duration_8> // Body feels very light, as if it were floating on air
 / options = ("Not Applicable","A Few Seconds", "A Few Minutes","A Few Hours","About a Day","More Than a Day", "More Than a Week")
 / optionvalues = ("0","1","2","3","4","5","6")
-/ position = (70%, 74%)
+/ position = (69%, 74%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown frequency_9> // No emotions felt when weeping or laughing
 / options = ("Never","Rarely","Often","Very Often","All the Time")
 / optionvalues = ("0","1","2","3","4")
 / position = (49%, 81%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown duration_9> // No emotions felt when weeping or laughing
 / options = ("Not Applicable","A Few Seconds", "A Few Minutes","A Few Hours","About a Day","More Than a Day", "More Than a Week")
 / optionvalues = ("0","1","2","3","4","5","6")
-/ position = (70%, 81%)
+/ position = (69%, 81%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown frequency_10> // Feeling of not having any thoughts at all
 / options = ("Never","Rarely","Often","Very Often","All the Time")
 / optionvalues = ("0","1","2","3","4")
 / position = (49%, 22%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown duration_10> // Feeling of not having any thoughts at all
 / options = ("Not Applicable","A Few Seconds", "A Few Minutes","A Few Hours","About a Day","More Than a Day", "More Than a Week")
 / optionvalues = ("0","1","2","3","4","5","6")
-/ position = (70%, 22%)
+/ position = (69%, 22%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown frequency_11> // Own voice sounds more remote and unreal
 / options = ("Never","Rarely","Often","Very Often","All the Time")
 / optionvalues = ("0","1","2","3","4")
 / position = (49%, 29%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown duration_11> // Own voice sounds more remote and unreal
 / options = ("Not Applicable","A Few Seconds", "A Few Minutes","A Few Hours","About a Day","More Than a Day", "More Than a Week")
 / optionvalues = ("0","1","2","3","4","5","6")
-/ position = (70%, 29%)
+/ position = (69%, 29%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown frequency_12> // Feel like hands or feet becoming bigger or smaller
 / options = ("Never","Rarely","Often","Very Often","All the Time")
 / optionvalues = ("0","1","2","3","4")
 / position = (49%, 36%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown duration_12> // Feel like hands or feet becoming bigger or smaller
 / options = ("Not Applicable","A Few Seconds", "A Few Minutes","A Few Hours","About a Day","More Than a Day", "More Than a Week")
 / optionvalues = ("0","1","2","3","4","5","6")
-/ position = (70%, 36%)
+/ position = (69%, 36%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown frequency_13> // Feel like hands or feet becoming bigger or smaller
 / options = ("Never","Rarely","Often","Very Often","All the Time")
 / optionvalues = ("0","1","2","3","4")
 / position = (49%, 43%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown duration_13> // Feel like hands or feet becoming bigger or smaller
 / options = ("Not Applicable","A Few Seconds", "A Few Minutes","A Few Hours","About a Day","More Than a Day", "More Than a Week")
 / optionvalues = ("0","1","2","3","4","5","6")
-/ position = (70%, 43%)
+/ position = (69%, 43%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown frequency_14> // Recently done things feel as if they took place a long time ago
 / options = ("Never","Rarely","Often","Very Often","All the Time")
 / optionvalues = ("0","1","2","3","4")
 / position = (49%, 52%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown duration_14> // Recently done things feel as if they took place a long time ago
 / options = ("Not Applicable","A Few Seconds", "A Few Minutes","A Few Hours","About a Day","More Than a Day", "More Than a Week")
 / optionvalues = ("0","1","2","3","4","5","6")
-/ position = (70%, 52%)
+/ position = (69%, 52%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown frequency_15> // See oneself outside, as if looking in a mirror
 / options = ("Never","Rarely","Often","Very Often","All the Time")
 / optionvalues = ("0","1","2","3","4")
 / position = (49%, 61%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown duration_15> // See oneself outside, as if looking in a mirror
 / options = ("Not Applicable","A Few Seconds", "A Few Minutes","A Few Hours","About a Day","More Than a Day", "More Than a Week")
 / optionvalues = ("0","1","2","3","4","5","6")
-/ position = (70%, 61%)
+/ position = (69%, 61%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown frequency_16> // Personal memories feel as if one had not been involved in them
 / options = ("Never","Rarely","Often","Very Often","All the Time")
 / optionvalues = ("0","1","2","3","4")
 / position = (49%, 70%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown duration_16> // Personal memories feel as if one had not been involved in them
 / options = ("Not Applicable","A Few Seconds", "A Few Minutes","A Few Hours","About a Day","More Than a Day", "More Than a Week")
 / optionvalues = ("0","1","2","3","4","5","6")
-/ position = (70%, 70%)
+/ position = (69%, 70%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown frequency_17> // When in a new situation, feeling as if it happened before 
 / options = ("Never","Rarely","Often","Very Often","All the Time")
 / optionvalues = ("0","1","2","3","4")
 / position = (49%, 79%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown duration_17> // When in a new situation, feeling as if it happened before 
 / options = ("Not Applicable","A Few Seconds", "A Few Minutes","A Few Hours","About a Day","More Than a Day", "More Than a Week")
 / optionvalues = ("0","1","2","3","4","5","6")
-/ position = (70%, 79%)
+/ position = (69%, 79%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown frequency_18> // Unable to feel affection towards family and friends 
 / options = ("Never","Rarely","Often","Very Often","All the Time")
 / optionvalues = ("0","1","2","3","4")
 / position = (49%, 20%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown duration_18> // Unable to feel affection towards family and friends 
 / options = ("Not Applicable","A Few Seconds", "A Few Minutes","A Few Hours","About a Day","More Than a Day", "More Than a Week")
 / optionvalues = ("0","1","2","3","4","5","6")
-/ position = (70%, 20%)
+/ position = (69%, 20%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown frequency_19> // Objects look smaller or further away
 / options = ("Never","Rarely","Often","Very Often","All the Time")
 / optionvalues = ("0","1","2","3","4")
 / position = (49%, 27%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown duration_19> // Objects look smaller or further away
 / options = ("Not Applicable","A Few Seconds", "A Few Minutes","A Few Hours","About a Day","More Than a Day", "More Than a Week")
 / optionvalues = ("0","1","2","3","4","5","6")
-/ position = (70%, 27%)
+/ position = (69%, 27%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown frequency_20> // Unable to feel properly things touched with hands
 / options = ("Never","Rarely","Often","Very Often","All the Time")
 / optionvalues = ("0","1","2","3","4")
 / position = (49%, 34%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown duration_20> // Unable to feel properly things touched with hands
 / options = ("Not Applicable","A Few Seconds", "A Few Minutes","A Few Hours","About a Day","More Than a Day", "More Than a Week")
 / optionvalues = ("0","1","2","3","4","5","6")
-/ position = (70%, 34%)
+/ position = (69%, 34%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown frequency_21> // Unable to picture things in mind
 / options = ("Never","Rarely","Often","Very Often","All the Time")
 / optionvalues = ("0","1","2","3","4")
 / position = (49%, 41%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown duration_21> // Unable to picture things in mind
 / options = ("Not Applicable","A Few Seconds", "A Few Minutes","A Few Hours","About a Day","More Than a Day", "More Than a Week")
 / optionvalues = ("0","1","2","3","4","5","6")
-/ position = (70%, 41%)
+/ position = (69%, 41%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown frequency_22> // Feeling detached from bodily pain
 / options = ("Never","Rarely","Often","Very Often","All the Time")
 / optionvalues = ("0","1","2","3","4")
 / position = (49%, 48%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown duration_22> // Feeling detached from bodily pain
 / options = ("Not Applicable","A Few Seconds", "A Few Minutes","A Few Hours","About a Day","More Than a Day", "More Than a Week")
 / optionvalues = ("0","1","2","3","4","5","6")
-/ position = (70%, 48%)
+/ position = (69%, 48%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown frequency_23> // Feeling of being outside the body
 / options = ("Never","Rarely","Often","Very Often","All the Time")
 / optionvalues = ("0","1","2","3","4")
 / position = (49%, 55%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown duration_23> // Feeling of being outside the body
 / options = ("Not Applicable","A Few Seconds", "A Few Minutes","A Few Hours","About a Day","More Than a Day", "More Than a Week")
 / optionvalues = ("0","1","2","3","4","5","6")
-/ position = (70%, 55%)
+/ position = (69%, 55%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown frequency_24> // Feeling mechanical and ‘robotic’ when moving
 / options = ("Never","Rarely","Often","Very Often","All the Time")
 / optionvalues = ("0","1","2","3","4")
 / position = (49%, 63%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown duration_24> // Feeling mechanical and ‘robotic’ when moving
 / options = ("Not Applicable","A Few Seconds", "A Few Minutes","A Few Hours","About a Day","More Than a Day", "More Than a Week")
 / optionvalues = ("0","1","2","3","4","5","6")
-/ position = (70%, 63%)
+/ position = (69%, 63%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown frequency_25> // Smell of things no longer gives feeling of pleasure or dislike 
 / options = ("Never","Rarely","Often","Very Often","All the Time")
 / optionvalues = ("0","1","2","3","4")
 / position = (49%, 70%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown duration_25> // Smell of things no longer gives feeling of pleasure or dislike 
 / options = ("Not Applicable","A Few Seconds", "A Few Minutes","A Few Hours","About a Day","More Than a Day", "More Than a Week")
 / optionvalues = ("0","1","2","3","4","5","6")
-/ position = (70%, 70%)
+/ position = (69%, 70%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown frequency_26> // Detached from own thoughts like they have a life of their own 
 / options = ("Never","Rarely","Often","Very Often","All the Time")
 / optionvalues = ("0","1","2","3","4")
 / position = (49%, 79%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown duration_26> // Detached from own thoughts like they have a life of their own 
 / options = ("Not Applicable","A Few Seconds", "A Few Minutes","A Few Hours","About a Day","More Than a Day", "More Than a Week")
 / optionvalues = ("0","1","2","3","4","5","6")
-/ position = (70%, 79%)
+/ position = (69%, 79%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown frequency_27> // Urge to touch oneself to be reassured of body existence
 / options = ("Never","Rarely","Often","Very Often","All the Time")
 / optionvalues = ("0","1","2","3","4")
 / position = (49%, 43%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown duration_27> // Urge to touch oneself to be reassured of body existence
 / options = ("Not Applicable","A Few Seconds", "A Few Minutes","A Few Hours","About a Day","More Than a Day", "More Than a Week")
 / optionvalues = ("0","1","2","3","4","5","6")
-/ position = (70%, 43%)
+/ position = (69%, 43%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown frequency_28> // Unable to feel hunger or thirst
 / options = ("Never","Rarely","Often","Very Often","All the Time")
 / optionvalues = ("0","1","2","3","4")
 / position = (49%, 50%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown duration_28> // Unable to feel hunger or thirst
 / options = ("Not Applicable","A Few Seconds", "A Few Minutes","A Few Hours","About a Day","More Than a Day", "More Than a Week")
 / optionvalues = ("0","1","2","3","4","5","6")
-/ position = (70%, 50%)
+/ position = (69%, 50%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown frequency_29> // Previously familiar places look unfamiliar
 / options = ("Never","Rarely","Often","Very Often","All the Time")
 / optionvalues = ("0","1","2","3","4")
 / position = (49%, 57%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <dropdown duration_29> // Previously familiar places look unfamiliar
 / options = ("Not Applicable","A Few Seconds", "A Few Minutes","A Few Hours","About a Day","More Than a Day", "More Than a Week")
 / optionvalues = ("0","1","2","3","4","5","6")
-/ position = (70%, 57%)
+/ position = (69%, 57%)
+/ responsefontstyle = ("Arial", 2%)
 </dropdown>
 
 <item Survey_Text_Items>
-/ 1 = "1) Please answer the following items to the best of your ability"
+/ 1 = "1) Please answer the following items to the best of your ability regarding your reality experience"
 / 2 = "2) Please answer the following items to the best of your ability (continued)"
 / 3 = "3) Please answer the following items to the best of your ability (continued)"
 / 4 = "4) Please answer the following items to the best of your ability (continued)"
@@ -852,7 +919,7 @@ to proceed to the next stage
 </trial>
 
 <trial CatchTrial1>
-/ stimulusframes = [1  = response1d, response2d, response3d, response4d, response5d, response6d, response7d, response8d, response_blank, real, unreal, RealityReminder, CatchText1, QuestionNumberReminder]
+/ stimulusframes = [1  = response1d, response2d, response3d, response4d, response5d, response6d, response7d, response8d, response_blank, real, unreal, CatchText1, QuestionNumberReminder]
 / validresponse = (response1d, response2d, response3d, response4d, response5d, response6d, response7d, response8d)
 / inputdevice = mouse
 / branch = [
@@ -861,7 +928,7 @@ to proceed to the next stage
 </trial>
 
 <trial CatchTrial2>
-/ stimulusframes = [1  = response1d, response2d, response3d, response4d, response5d, response6d, response7d, response8d, response_blank, real, unreal, RealityReminder, CatchText2, QuestionNumberReminder]
+/ stimulusframes = [1  = response1d, response2d, response3d, response4d, response5d, response6d, response7d, response8d, response_blank, real, unreal, CatchText2, QuestionNumberReminder]
 / validresponse = (response1d, response2d, response3d, response4d, response5d, response6d, response7d, response8d)
 / inputdevice = mouse
 / branch = [
