@@ -55,9 +55,8 @@ EXPERIMENTAL SET-UP
 </defaults>
 
 <data>
-/ columns = (date, time, group, session, build, trialcode, response, stimulusnumber, stimulusitem)
+/ columns = (date, time, group, session, build, trialcode, response, stimulusitem, trialnum, stimulusonset, latency)
 </data>
-
 
 ----- Loading Pictures as Items and Setting Text Elements -----
 
@@ -87,6 +86,31 @@ EXPERIMENTAL SET-UP
 / 23 = "White_1.jpg"
 / 24 = "White_1.4.jpg"
 / 25 = "White_1.8.jpg"
+/ 26 = "TwoPink_1.8.jpg"
+/ 27 = "TwoPink_1.4.jpg"
+/ 28 = "TwoPink_1.jpg"
+/ 29 = "TwoPink_0.6.jpg"
+/ 30 = "TwoPink_0.2.jpg"
+/ 31 = "PurpleValley_1.8.jpg"
+/ 32 = "PurpleValley_1.4.jpg"
+/ 33 = "PurpleValley_0.6.jpg"
+/ 34 = "PurpleValley_0.2.jpg"
+/ 35 = "PurpleValley_1.jpg"
+/ 36 = "ThreePink_1.8.jpg"
+/ 37 = "ThreePink_1.4.jpg"
+/ 38 = "ThreePink_1.jpg"
+/ 39 = "ThreePink_0.6.jpg"
+/ 40 = "ThreePink_0.2.jpg"
+/ 41 = "OneOrange_1.8.jpg"
+/ 42 = "OneOrange_1.4.jpg"
+/ 43 = "OneOrange_1.jpg"
+/ 44 = "OneOrange_0.6.jpg"
+/ 45 = "OneOrange_0.2.jpg"
+/ 46 = "OneR_1.8.jpg"
+/ 47 = "OneR_1.4.jpg"
+/ 48 = "OneR_0.6.jpg"
+/ 49 = "OneR_0.2.jpg"
+/ 50 = "OneR_1.jpg"
 </item>
 
 <item PracticeFlower>
@@ -108,7 +132,7 @@ EXPERIMENTAL SET-UP
 / items = ("Welcome to the reality test. 
 
 	The purpose of this experiment is to evaluate the quality of different cameras. 
-	A series of flowers (and other pictures) taken by different cameras will be presented on the screen, and your task is to evaluate how real each picture looks. 
+	A series of flowers taken by different cameras will be presented on the screen, and your task is to evaluate how real each picture looks. 
 	Before the real trial, you will be presented with 1 practice trial. It is important to also note there will be a few trials throughout the test that have special (different) instructions. 
 	Please be aware of them. Before beginning, it is important you:
 	
@@ -225,13 +249,29 @@ EXPERIMENTAL SET-UP
 / color = aqua
 </text>
 
+<text CatchText3>
+/ items = ("Please Press the Number 2 to Continue") // Catch text, used for the Catch Trial. Here, the user must select 2 for their responses to be valid (can still proceed with other numbers, but they will be wrong!)
+/ fontstyle = ("Arial", 2.5%)
+/ txbgcolor = black
+/ position = (50%, 20%)
+/ color = aqua
+</text>
+
+<text CatchText4>
+/ items = ("Please Press the Number -4 to Continue") // Catch text, used for the Catch Trial. Here, the user must select -4 for their responses to be valid (can still proceed with other numbers, but they will be wrong!)
+/ fontstyle = ("Arial", 2.5%)
+/ txbgcolor = black
+/ position = (50%, 20%)
+/ color = aqua
+</text>
+
 ----- Trial Counter ----
 <values Trial_Number>
 / TrialCounter = 0
 </values>
 
 
------ Setting Up Instruction, Practice and Catch Trials -----
+----- Setting Up Instruction and Practice Trials, with Catch Trial Text-----
 
 <trial Instruct>
 / stimulusframes = [1 = instructions]
@@ -763,50 +803,50 @@ Each of these pictures is one octant of an "octagon" of numbers which range from
 black box in the middle. When the user clicks a number in one of the octants, another shape comes up which is clickable, 
 to proceed to the next stage 
 
-<picture response1d>
-/ items = ("response1disks.png") // Corresponds to the number 4
+<picture pos4>
+/ items = ("response1disks.png") // Corresponds to the number positive 4
 / position = (55.7%,40%)
 / size = (15.8%,15.8%)
 </picture>
 
-<picture response2d>
-/ items = ("response2disks.png") // Corresponds to the number 3 
+<picture pos3>
+/ items = ("response2disks.png") // Corresponds to the number positive 3 
 / position = (55.7%,40%)
 / size = (15.8%,15.8%)
 </picture>
 
-<picture response3d>
-/ items = ("response3disks.png") // Corresponds to the number 2
+<picture pos2>
+/ items = ("response3disks.png") // Corresponds to the number positive 2
 / position = (55.7%,60%)
 / size = (15.8%,15.8%)
 </picture>
 
-<picture response4d>
-/ items = ("response4disks.png") // Corresponds to the number 1 
+<picture pos1>
+/ items = ("response4disks.png") // Corresponds to the number positive 1
 / position = (55.7%,60%)
 / size = (15.8%,15.8%)
 </picture>
 
-<picture response5d>
-/ items = ("response5disks.png") // Corresponds to the number -1
+<picture neg1>
+/ items = ("response5disks.png") // Corresponds to the number negative 1 (-1)
 / position = (44.3%,60%)
 / size = (15.8%,15.8%)
 </picture>
 
-<picture response6d>
-/ items = ("response6disks.png") // Corresponds to the number -2 
+<picture neg2>
+/ items = ("response6disks.png") // Corresponds to the number negative 2 (-2) 
 / position = (44.3%,60%)
 / size = (15.8%,15.8%)
 </picture>
 
-<picture response7d>
-/ items = ("response7disks.png") // Corresponds to the number -3
+<picture neg3>
+/ items = ("response7disks.png") // Corresponds to the number negative 3 (-3)
 / position = (44.3%,40%)
 / size = (15.8%,15.8%)
 </picture>
 
-<picture response8d>
-/ items = ("response8disks.png") // Corresponds to the number -4
+<picture neg4>
+/ items = ("response8disks.png") // Corresponds to the number negative 4 (-4)
 / position = (44.3%,40%)
 / size = (15.8%,15.8%)
 </picture>
@@ -861,7 +901,7 @@ to proceed to the next stage
 </text>
 
 <text QuestionNumberReminder>
-/ items = ("You have finished <%values.TrialCounter%> of 27 Questions")
+/ items = ("You have finished <%values.TrialCounter%> of 54 Questions")
 / fontstyle = ("Arial", 2.5%)
 / txbgcolor = black
 / position = (50%, 90%)
@@ -873,8 +913,8 @@ to proceed to the next stage
 ----- Practice Trials -----
 
 <trial peripheral_response_practice>
-/ stimulusframes = [1  = response1d, response2d, response3d, response4d, response5d, response6d, response7d, response8d, response_blank, real, unreal, RealityReminder]
-/ validresponse = (response1d, response2d, response3d, response4d, response5d, response6d, response7d, response8d)
+/ stimulusframes = [1  =  pos4, pos3, pos2, pos1, neg1, neg2, neg3, neg4, response_blank, real, unreal, RealityReminder]
+/ validresponse = (pos4, pos3, pos2, pos1, neg1, neg2, neg3, neg4)
 / inputdevice = mouse
 / branch = [
 	trial.centermouse_practice
@@ -882,7 +922,7 @@ to proceed to the next stage
 </trial>
 
 <trial centermouse_practice>
-/ stimulusframes = [1  = response1d, response2d, response3d, response4d, response5d, response6d, response7d, response8d, orangesquare, real, unreal, RealityReminder, ContinueText]
+/ stimulusframes = [1  = pos4, pos3, pos2, pos1, neg1, neg2, neg3, neg4, orangesquare, real, unreal, RealityReminder, ContinueText]
 / inputdevice = mouse
 / recorddata = false
 / validresponse = (orangesquare)
@@ -892,8 +932,8 @@ to proceed to the next stage
 
 
 <trial peripheral_response>
-/ stimulusframes = [1  = response1d, response2d, response3d, response4d, response5d, response6d, response7d, response8d, response_blank, real, unreal, RealityReminder, QuestionNumberReminder]
-/ validresponse = (response1d, response2d, response3d, response4d, response5d, response6d, response7d, response8d)
+/ stimulusframes = [1  = pos4, pos3, pos2, pos1, neg1, neg2, neg3, neg4, response_blank, real, unreal, RealityReminder, QuestionNumberReminder]
+/ validresponse = (pos4, pos3, pos2, pos1, neg1, neg2, neg3, neg4)
 / inputdevice = mouse
 / branch = [
 	trial.centremouse
@@ -901,7 +941,7 @@ to proceed to the next stage
 </trial>
 
 <trial centremouse>
-/ stimulusframes = [1  = response1d, response2d, response3d, response4d, response5d, response6d, response7d, response8d, orangesquare, real, unreal, RealityReminder, ContinueText, QuestionNumberReminder]
+/ stimulusframes = [1  = pos4, pos3, pos2, pos1, neg1, neg2, neg3, neg4, orangesquare, real, unreal, RealityReminder, ContinueText, QuestionNumberReminder]
 / inputdevice = mouse
 / recorddata = false
 / validresponse = (orangesquare)
@@ -918,34 +958,60 @@ to proceed to the next stage
 / timeout = 20000
 </trial>
 
-<trial CatchTrial1>
-/ stimulusframes = [1  = response1d, response2d, response3d, response4d, response5d, response6d, response7d, response8d, response_blank, real, unreal, CatchText1, QuestionNumberReminder]
-/ validresponse = (response1d, response2d, response3d, response4d, response5d, response6d, response7d, response8d)
+<trial CatchTrialpos3> // first catch trial, correct response is 3
+/ stimulusframes = [1  = pos4, pos3, pos2, pos1, neg1, neg2, neg3, neg4, response_blank, real, unreal, CatchText1, QuestionNumberReminder]
+/ validresponse = (pos4, pos3, pos2, pos1, neg1, neg2, neg3, neg4)
 / inputdevice = mouse
 / branch = [
 	trial.centremouse
 ]
 </trial>
 
-<trial CatchTrial2>
-/ stimulusframes = [1  = response1d, response2d, response3d, response4d, response5d, response6d, response7d, response8d, response_blank, real, unreal, CatchText2, QuestionNumberReminder]
-/ validresponse = (response1d, response2d, response3d, response4d, response5d, response6d, response7d, response8d)
+<trial CatchTrialneg1> //second catch trial, correct response is -1 
+/ stimulusframes = [1  = pos4, pos3, pos2, pos1, neg1, neg2, neg3, neg4, response_blank, real, unreal, CatchText2, QuestionNumberReminder]
+/ validresponse = (pos4, pos3, pos2, pos1, neg1, neg2, neg3, neg4)
 / inputdevice = mouse
 / branch = [
 	trial.centremouse
 ]
 </trial>
 
------ Final Block -----
-<block test>
+<trial CatchTrialpos2> // third catch trial, correct response is 2
+/ stimulusframes = [1  = pos4, pos3, pos2, pos1, neg1, neg2, neg3, neg4, response_blank, real, unreal, CatchText3, QuestionNumberReminder]
+/ validresponse = (pos4, pos3, pos2, pos1, neg1, neg2, neg3, neg4)
+/ inputdevice = mouse
+/ branch = [
+	trial.centremouse
+]
+</trial>
+
+<trial CatchTrialneg4> // fourth and final catch trial, correct response is -4 
+/ stimulusframes = [1  = pos4, pos3, pos2, pos1, neg1, neg2, neg3, neg4, response_blank, real, unreal, CatchText4, QuestionNumberReminder]
+/ validresponse = (pos4, pos3, pos2, pos1, neg1, neg2, neg3, neg4)
+/ inputdevice = mouse
+/ branch = [
+	trial.centremouse
+]
+</trial>
+
+
+
+----- Final Blocks -----
+
+<block firstBlock>
 / trials = [1=Instruct; 2 = Practice1; 3 = PracticeFlower; 4 = peripheral_response_practice; 5 = PostPractice; 6,8,10,12,14,16,18,20,22 = noreplace(FLOWER); 24 = CatchTrialFlower; 26,28,30,32,34,36,38,40,42,44,46 = noreplace(FLOWER); 48 = CatchTrialFlower; 
-50,52,54,56,58 = noreplace(FLOWER); 7,9,11,13,15,17,19,21,23 = peripheral_response; 25 = CatchTrial1; 27,29,31,33,35,37,39,41,43,45,47 = peripheral_response; 49 = CatchTrial2; 51,53,55,57,59 = peripheral_response]
+50,52,54,56,58 = noreplace(FLOWER); 7,9,11,13,15,17,19,21,23 = peripheral_response; 25 = CatchTrialpos3; 27,29,31,33,35,37,39,41,43,45,47 = peripheral_response; 49 = CatchTrialneg1; 51,53,55,57,59 = peripheral_response]
 / preinstructions = (HTML_Instructions,HTML_Consent)
+</block>
+
+<block secondblock>
+/ trials = [1,3,5,7,9,11,13,15,17,19 = noreplace(FLOWER); 2,4,6,8,10,12,14,16,18,20 = peripheral_response; 21 = CatchTrialFlower; 22 = CatchTrialpos2; 23,25,27,29,31,33,35,37,39,41 = noreplace(FLOWER); 24,26,28,30,32,34,36,38,40,42 = peripheral_response;
+43 = CatchTrialFlower; 44 = CatchTrialneg4; 45,47,49,51,53 = noreplace(FLOWER); 46,48,50,52,54 = peripheral_response]
 </block>
 
 ----- Final Experiment -----
 
 <expt Final>
-/ blocks = [1 = test; 2 = survey.DPDR_final]
+/ blocks = [1 = firstBlock; 2 = secondblock; 3 = survey.DPDR_final]
 / postinstructions = (HTML_Complete)
 </expt>
