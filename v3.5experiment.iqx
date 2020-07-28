@@ -129,20 +129,14 @@ EXPERIMENTAL SET-UP
 </text>
 
 <text instructions>
-/ items = ("Welcome to the reality test. 
-
-	The purpose of this experiment is to evaluate the quality of different cameras. 
+/ items = ("
 	A series of flowers taken by different cameras will be presented on the screen, and your task is to evaluate how real each picture looks. 
-	Before the real trial, you will be presented with 1 practice trial. It is important to also note there will be a few trials throughout the test that have special (different) instructions. 
-	Please be aware of them. Before beginning, it is important you:
 	
-	1. Turn off all light sources in the room and make the room as dark as you can 
+	Before the real trial, you will be presented with 1 practice trial. 
 	
-	2. Turn up the brightness on your screen to maximum
+	There will be a few trials throughout the test that have special instructions. Please click the number they ask for instead of your own input.
 	
-	3. Turn of any colour adjustment modes on your screen/monitor e.g. night mode or blue light filter
-	
-	Once done, press the SPACE BAR to begin practice
+	Press the SPACE BAR to begin practice
 	
 	Press CTRL + Q anytime throughout the experiment to quit")
 / hjustify = center
@@ -150,7 +144,7 @@ EXPERIMENTAL SET-UP
 / position = (50%, 70%)
 / valign = bottom
 / select = instructions
-/ fontstyle = ("Arial", 3.5%)
+/ fontstyle = ("Arial", 5%)
 / color = orange
 / txbgcolor = black
 </text>
@@ -172,6 +166,67 @@ EXPERIMENTAL SET-UP
 
 
 ----- Some more text settings -----
+<text CalibrationText1>
+/ items = ("Before beginning, it is important that you:
+
+	1. Turn off all light sources in the room and make the room as dark as you can 
+	")
+/ hjustify = center
+/ size = (90%, 60%)
+/ position = (50%, 70%)
+/ valign = bottom
+/ select = instructions
+/ fontstyle = ("Arial", 5%)
+/ color = orange
+/ txbgcolor = black
+</text>
+
+<text CalibrationText2>
+/ items = ("
+	2. Turn up the brightness on your screen to maximum
+	")
+/ hjustify = center
+/ size = (90%, 60%)
+/ position = (50%, 70%)
+/ valign = bottom
+/ select = instructions
+/ fontstyle = ("Arial", 5%)
+/ color = orange
+/ txbgcolor = black
+</text>
+
+<text CalibrationText3>
+/ items = ("3. Turn of any colour adjustment modes on your screen/monitor e.g. night mode or blue light filter
+	
+	Press SPACE BAR to continue once these settings are adjusted")
+/ hjustify = center
+/ size = (90%, 60%)
+/ position = (50%, 70%)
+/ valign = bottom
+/ select = instructions
+/ fontstyle = ("Arial", 5%)
+/ color = orange
+/ txbgcolor = black
+</text>
+
+<picture NightMode>
+/ items = ("NightMode.png")
+/ size = (50%, 50%)
+/ position = (50%, 60%)
+</picture>
+
+<picture Brightness>
+/ items = ("brightness.jpg")
+/ position = (50%, 60%)
+/ size = (50%, 50%)
+
+</picture>
+
+<picture LightSwitch>
+/ items = ("LightSwitch.jpg")
+/ position = (50%, 60%)
+/ size = (50%, 50%)
+</picture>
 
 
 <text PracticeText>
@@ -235,7 +290,7 @@ EXPERIMENTAL SET-UP
 
 <text CatchText1>
 / items = ("Please Press the Number 3 to Continue") // Catch text, used for the Catch Trial. Here, the user must select 3 for their responses to be valid (can still proceed with other numbers, but they will be wrong!)
-/ fontstyle = ("Arial", 2.5%)
+/ fontstyle = ("Arial", 3.5%)
 / txbgcolor = black
 / position = (50%, 20%)
 / color = aqua
@@ -243,7 +298,7 @@ EXPERIMENTAL SET-UP
 
 <text CatchText2>
 / items = ("Please Press the Number -1 to Continue") // Catch text, used for the Catch Trial. Here, the user must select -1 for their responses to be valid (can still proceed with other numbers, but they will be wrong!)
-/ fontstyle = ("Arial", 2.5%)
+/ fontstyle = ("Arial", 3.5%)
 / txbgcolor = black
 / position = (50%, 20%)
 / color = aqua
@@ -251,7 +306,7 @@ EXPERIMENTAL SET-UP
 
 <text CatchText3>
 / items = ("Please Press the Number 2 to Continue") // Catch text, used for the Catch Trial. Here, the user must select 2 for their responses to be valid (can still proceed with other numbers, but they will be wrong!)
-/ fontstyle = ("Arial", 2.5%)
+/ fontstyle = ("Arial", 3.5%)
 / txbgcolor = black
 / position = (50%, 20%)
 / color = aqua
@@ -259,7 +314,7 @@ EXPERIMENTAL SET-UP
 
 <text CatchText4>
 / items = ("Please Press the Number -4 to Continue") // Catch text, used for the Catch Trial. Here, the user must select -4 for their responses to be valid (can still proceed with other numbers, but they will be wrong!)
-/ fontstyle = ("Arial", 2.5%)
+/ fontstyle = ("Arial", 3.5%)
 / txbgcolor = black
 / position = (50%, 20%)
 / color = aqua
@@ -271,7 +326,25 @@ EXPERIMENTAL SET-UP
 </values>
 
 
------ Setting Up Instruction and Practice Trials, with Catch Trial Text-----
+----- Setting Up Instruction, Calibration, and Practice Trials, with Catch Trial Text-----
+
+<trial Calibration1>
+/ stimulusframes = [1 = CalibrationText1; 2 = LightSwitch]
+/ correctresponse = (" ")
+/ posttrialpause = 300
+</trial>
+
+<trial Calibration2>
+/ stimulusframes = [1 = CalibrationText2; 2 = Brightness]
+/ correctresponse = (" ")
+/ posttrialpause = 300
+</trial>
+
+<trial Calibration3>
+/ stimulusframes = [1 = CalibrationText3; 2 = NightMode]
+/ correctresponse = (" ")
+/ posttrialpause = 300
+</trial>
 
 <trial Instruct>
 / stimulusframes = [1 = instructions]
@@ -748,15 +821,8 @@ this is obviously too large, but I am not sure how else to organise it. I will t
 / responsefontstyle = ("Arial", 2%)
 </dropdown>
 
-<item Survey_Text_Items>
-/ 1 = "1) Please answer the following items to the best of your ability regarding your reality experience"
-/ 2 = "2) Please answer the following items to the best of your ability (continued)"
-/ 3 = "3) Please answer the following items to the best of your ability (continued)"
-/ 4 = "4) Please answer the following items to the best of your ability (continued)"
-</item>
-
-<text Survey_Text>
-/ items = Survey_Text_Items
+<text Survey_Text_1>
+/ items = ("1) Please answer the following items to the best of your ability regarding your reality experience")
 / select = sequence
 / position = (50%, 8%)
 / fontstyle = ("Arial", 2.5%)
@@ -764,37 +830,389 @@ this is obviously too large, but I am not sure how else to organise it. I will t
 / color = orange
 </text>
 
+<text Survey_Text_2>
+/ items = ("2) Please answer the following items to the best of your ability (continued)")
+/ select = sequence
+/ position = (50%, 8%)
+/ fontstyle = ("Arial", 2.5%)
+/ txbgcolor = black
+/ color = orange
+</text>
 
-<surveypage DPDR_1>
-/ questions = [1 = frequency_1,duration_1; 2 = frequency_2, duration_2; 3 = frequency_3, duration_3; 4 = frequency_4, duration_4; 5 = frequency_5, duration_5; 6 = frequency_6, duration_6;
- 7 = frequency_7, duration_7; 8 = frequency_8, duration_8; 9 = frequency_9, duration_9]
-/ stimulusframes = [1 = bg; 2 = noreplace(Survey_Text)]
+<text Survey_Text_3>
+/ items = ("3) Please answer the following items to the best of your ability (continued)")
+/ select = sequence
+/ position = (50%, 8%)
+/ fontstyle = ("Arial", 2.5%)
+/ txbgcolor = black
+/ color = orange
+</text>
+
+<text Survey_Text_4>
+/ items = ("4) Please answer the following items to the best of your ability (continued)")
+/ select = sequence
+/ position = (50%, 8%)
+/ fontstyle = ("Arial", 2.5%)
+/ txbgcolor = black
+/ color = orange
+</text>
+
+<surveypage freq1>
+/ questions = [1 = frequency_1]
+/ stimulusframes = [1 = bg; 2 = Survey_Text_1]
 / txcolor = orange
 </surveypage>
 
-<surveypage DPDR_2>
-/ questions = [1 = frequency_10, duration_10; 2 = frequency_11, duration_11; 3 = frequency_12, duration_12; 4 = frequency_13, duration_13; 5 = frequency_14, duration_14; 6 = frequency_15, duration_15; 7 = frequency_16, duration_16; 8 = frequency_17, duration_17]
-/ stimulusframes = [1 = bg_2; 2 = noreplace(Survey_Text)]
+<surveypage dur1>
+/ questions = [1 = duration_1]
+/ stimulusframes = [1 = bg; 2 = Survey_Text_1]
 / txcolor = orange
 </surveypage>
 
-<surveypage DPDR_3>
-/ questions = [1 = frequency_18, duration_18; 2 = frequency_19, duration_19; 3 = frequency_20, duration_20; 4 = frequency_21, duration_21; 5 = frequency_22, duration_22; 6 = frequency_23, duration_23; 7 = frequency_24, duration_24; 
-8 = frequency_25, duration_25; 9 = frequency_26, duration_26]
-/ stimulusframes = [1 = bg_3; 2 = noreplace(Survey_Text)]
+<surveypage freq2>
+/ questions = [1 = frequency_2]
+/ stimulusframes = [1 = bg; 2 = Survey_Text_1]
 / txcolor = orange
 </surveypage>
 
-<surveypage DPDR_4>
-/ questions = [1 = frequency_27, duration_27; 2 = frequency_28, duration_28; 3 = frequency_29, duration_29 ]
-/ stimulusframes = [1 = bg_4; 2 = noreplace(Survey_Text)]
+<surveypage dur2>
+/ questions = [1 = duration_2]
+/ stimulusframes = [1 = bg; 2 = Survey_Text_1]
 / txcolor = orange
 </surveypage>
+
+<surveypage freq3>
+/ questions = [1 = frequency_3]
+/ stimulusframes = [1 = bg; 2 = Survey_Text_1]
+/ txcolor = orange
+</surveypage>
+
+<surveypage dur3>
+/ questions = [1 = duration_3]
+/ stimulusframes = [1 = bg; 2 = Survey_Text_1]
+/ txcolor = orange
+</surveypage>
+
+<surveypage freq4>
+/ questions = [1 = frequency_4]
+/ stimulusframes = [1 = bg; 2 = Survey_Text_1]
+/ txcolor = orange
+</surveypage>
+
+<surveypage dur4>
+/ questions = [1 = duration_4]
+/ stimulusframes = [1 = bg; 2 = Survey_Text_1]
+/ txcolor = orange
+</surveypage>
+
+<surveypage freq5>
+/ questions = [1 = frequency_5]
+/ stimulusframes = [1 = bg; 2 = Survey_Text_1]
+/ txcolor = orange
+</surveypage>
+
+<surveypage dur5>
+/ questions = [1 = duration_5]
+/ stimulusframes = [1 = bg; 2 = Survey_Text_1]
+/ txcolor = orange
+</surveypage>
+
+<surveypage freq6>
+/ questions = [1 = frequency_6]
+/ stimulusframes = [1 = bg; 2 = Survey_Text_1]
+/ txcolor = orange
+</surveypage>
+
+<surveypage dur6>
+/ questions = [1 = duration_6]
+/ stimulusframes = [1 = bg; 2 = Survey_Text_1]
+/ txcolor = orange
+</surveypage>
+
+<surveypage freq7>
+/ questions = [1 = frequency_7]
+/ stimulusframes = [1 = bg; 2 = Survey_Text_1]
+/ txcolor = orange
+</surveypage>
+
+<surveypage dur7>
+/ questions = [1 = duration_7]
+/ stimulusframes = [1 = bg; 2 = Survey_Text_1]
+/ txcolor = orange
+</surveypage>
+
+<surveypage freq8>
+/ questions = [1 = frequency_8]
+/ stimulusframes = [1 = bg; 2 = Survey_Text_1]
+/ txcolor = orange
+</surveypage>
+
+<surveypage dur8>
+/ questions = [1 = duration_8]
+/ stimulusframes = [1 = bg; 2 = Survey_Text_1]
+/ txcolor = orange
+</surveypage>
+
+<surveypage freq9>
+/ questions = [1 = frequency_9]
+/ stimulusframes = [1 = bg; 2 = Survey_Text_1]
+/ txcolor = orange
+</surveypage>
+
+<surveypage dur9>
+/ questions = [1 = duration_9]
+/ stimulusframes = [1 = bg; 2 = Survey_Text_1]
+/ txcolor = orange
+</surveypage>
+
+<surveypage freq10>
+/ questions = [1 = frequency_10]
+/ stimulusframes = [1 = bg_2; 2 = Survey_Text_2]
+/ txcolor = orange
+</surveypage>
+
+<surveypage dur10>
+/ questions = [1 = duration_10]
+/ stimulusframes = [1 = bg_2; 2 = Survey_Text_2]
+/ txcolor = orange
+</surveypage>
+
+<surveypage freq11>
+/ questions = [1 = frequency_11]
+/ stimulusframes = [1 = bg_2; 2 = Survey_Text_2]
+/ txcolor = orange
+</surveypage>
+
+<surveypage dur11>
+/ questions = [1 = duration_11]
+/ stimulusframes = [1 = bg_2; 2 = Survey_Text_2]
+/ txcolor = orange
+</surveypage>
+
+<surveypage freq12>
+/ questions = [1 = frequency_12]
+/ stimulusframes = [1 = bg_2; 2 = Survey_Text_2]
+/ txcolor = orange
+</surveypage>
+
+<surveypage dur12>
+/ questions = [1 = duration_12]
+/ stimulusframes = [1 = bg_2; 2 = Survey_Text_2]
+/ txcolor = orange
+</surveypage>
+
+<surveypage freq13>
+/ questions = [1 = frequency_13]
+/ stimulusframes = [1 = bg_2; 2 = Survey_Text_2]
+/ txcolor = orange
+</surveypage>
+
+<surveypage dur13>
+/ questions = [1 = duration_13]
+/ stimulusframes = [1 = bg_2; 2 = Survey_Text_2]
+/ txcolor = orange
+</surveypage>
+
+<surveypage freq14>
+/ questions = [1 = frequency_14]
+/ stimulusframes = [1 = bg_2; 2 = Survey_Text_2]
+/ txcolor = orange
+</surveypage>
+
+<surveypage dur14>
+/ questions = [1 = duration_14]
+/ stimulusframes = [1 = bg_2; 2 = Survey_Text_2]
+/ txcolor = orange
+</surveypage>
+
+<surveypage freq15>
+/ questions = [1 = frequency_15]
+/ stimulusframes = [1 = bg_2; 2 = Survey_Text_2]
+/ txcolor = orange
+</surveypage>
+
+<surveypage dur15>
+/ questions = [1 = duration_15]
+/ stimulusframes = [1 = bg_2; 2 = Survey_Text_2]
+/ txcolor = orange
+</surveypage>
+
+<surveypage freq16>
+/ questions = [1 = frequency_16]
+/ stimulusframes = [1 = bg_2; 2 = Survey_Text_2]
+/ txcolor = orange
+</surveypage>
+
+<surveypage dur16>
+/ questions = [1 = duration_16]
+/ stimulusframes = [1 = bg_2; 2 = Survey_Text_2]
+/ txcolor = orange
+</surveypage>
+
+<surveypage freq17>
+/ questions = [1 = frequency_17]
+/ stimulusframes = [1 = bg_2; 2 = Survey_Text_2]
+/ txcolor = orange
+</surveypage>
+
+<surveypage dur17>
+/ questions = [1 = duration_17]
+/ stimulusframes = [1 = bg_2; 2 = Survey_Text_2]
+/ txcolor = orange
+</surveypage>
+
+<surveypage freq18>
+/ questions = [1 = frequency_18]
+/ stimulusframes = [1 = bg_3; 2 = Survey_Text_3]
+/ txcolor = orange
+</surveypage>
+
+<surveypage dur18>
+/ questions = [1 = duration_18]
+/ stimulusframes = [1 = bg_3; 2 = Survey_Text_3]
+/ txcolor = orange
+</surveypage>
+
+<surveypage freq19>
+/ questions = [1 = frequency_19]
+/ stimulusframes = [1 = bg_3; 2 = Survey_Text_3]
+/ txcolor = orange
+</surveypage>
+
+<surveypage dur19>
+/ questions = [1 = duration_19]
+/ stimulusframes = [1 = bg_3; 2 = Survey_Text_3]
+/ txcolor = orange
+</surveypage>
+
+<surveypage freq20>
+/ questions = [1 = frequency_20]
+/ stimulusframes = [1 = bg_3; 2 = Survey_Text_3]
+/ txcolor = orange
+</surveypage>
+
+<surveypage dur20>
+/ questions = [1 = duration_20]
+/ stimulusframes = [1 = bg_3; 2 = Survey_Text_3]
+/ txcolor = orange
+</surveypage>
+
+<surveypage freq21>
+/ questions = [1 = frequency_21]
+/ stimulusframes = [1 = bg_3; 2 = Survey_Text_3]
+/ txcolor = orange
+</surveypage>
+
+<surveypage dur21>
+/ questions = [1 = duration_21]
+/ stimulusframes = [1 = bg_3; 2 = Survey_Text_3]
+/ txcolor = orange
+</surveypage>
+
+<surveypage freq22>
+/ questions = [1 = frequency_22]
+/ stimulusframes = [1 = bg_3; 2 = Survey_Text_3]
+/ txcolor = orange
+</surveypage>
+
+<surveypage dur22>
+/ questions = [1 = duration_22]
+/ stimulusframes = [1 = bg_3; 2 = Survey_Text_3]
+/ txcolor = orange
+</surveypage>
+
+<surveypage freq23>
+/ questions = [1 = frequency_23]
+/ stimulusframes = [1 = bg_3; 2 = Survey_Text_3]
+/ txcolor = orange
+</surveypage>
+
+<surveypage dur23>
+/ questions = [1 = duration_23]
+/ stimulusframes = [1 = bg_3; 2 = Survey_Text_3]
+/ txcolor = orange
+</surveypage>
+
+<surveypage freq24>
+/ questions = [1 = frequency_24]
+/ stimulusframes = [1 = bg_3; 2 = Survey_Text_3]
+/ txcolor = orange
+</surveypage>
+
+<surveypage dur24>
+/ questions = [1 = duration_24]
+/ stimulusframes = [1 = bg_3; 2 = Survey_Text_3]
+/ txcolor = orange
+</surveypage>
+
+<surveypage freq25>
+/ questions = [1 = frequency_25]
+/ stimulusframes = [1 = bg_3; 2 = Survey_Text_3]
+/ txcolor = orange
+</surveypage>
+
+<surveypage dur25>
+/ questions = [1 = duration_25]
+/ stimulusframes = [1 = bg_3; 2 = Survey_Text_3]
+/ txcolor = orange
+</surveypage>
+
+<surveypage freq26>
+/ questions = [1 = frequency_26]
+/ stimulusframes = [1 = bg_3; 2 = Survey_Text_3]
+/ txcolor = orange
+</surveypage>
+
+<surveypage dur26>
+/ questions = [1 = duration_26]
+/ stimulusframes = [1 = bg_3; 2 = Survey_Text_3]
+/ txcolor = orange
+</surveypage>
+
+<surveypage freq27>
+/ questions = [1 = frequency_27]
+/ stimulusframes = [1 = bg_4; 2 = Survey_Text_4]
+/ txcolor = orange
+</surveypage>
+
+<surveypage dur27>
+/ questions = [1 = duration_27]
+/ stimulusframes = [1 = bg_4; 2 = Survey_Text_4]
+/ txcolor = orange
+</surveypage>
+
+<surveypage freq28>
+/ questions = [1 = frequency_28]
+/ stimulusframes = [1 = bg_4; 2 = Survey_Text_4]
+/ txcolor = orange
+</surveypage>
+
+<surveypage dur28>
+/ questions = [1 = duration_28]
+/ stimulusframes = [1 = bg_4; 2 = Survey_Text_4]
+/ txcolor = orange
+</surveypage>
+
+<surveypage freq29>
+/ questions = [1 = frequency_29]
+/ stimulusframes = [1 = bg_4; 2 = Survey_Text_4]
+/ txcolor = orange
+</surveypage>
+
+<surveypage dur29>
+/ questions = [1 = duration_29]
+/ stimulusframes = [1 = bg_4; 2 = Survey_Text_4]
+/ txcolor = orange
+</surveypage>
+
 
 <survey DPDR_final>
 / showpagenumbers = false // so we don't get the page numbers and questions numbers, as that has already been provided with the Survey_Text element 
 / showquestionnumbers = false
-/ pages = [1 = DPDR_1; 2 = DPDR_2; 3 = DPDR_3; 4 = DPDR_4]
+/ pages = [1 = freq1; 2 = dur1; 3 = freq2; 4 = dur2; 5 = freq3; 6 = dur3; 7 = freq4; 7 = dur4; 8 = freq5; 9 = dur5; 10 = freq6; 11 = dur6; 12 = freq7; 13 = dur7; 14 = freq8; 15 = dur8; 16 = freq9; 17 = dur9; 18 = freq10; 19 = dur10; 20 = freq11; 21 = dur11; 22 = freq12;
+23 = dur12; 24 = freq13; 25 = dur13; 26 = freq14; 27 = dur14; 28 = freq15; 29 = dur15; 30 = freq16; 31 = dur16; 32 = freq17; 33 = dur17; 34 = freq18; 35 = dur18; 36 = freq19; 37 = dur19; 38 = freq20; 39 = dur20; 40 = freq21; 41 = dur21; 
+42 = freq22; 43 = dur22; 44 = freq23; 45 = dur23; 46 = freq24; 47 = dur24; 48 = freq25; 49 = dur25; 50 = freq26; 51 = dur26; 52 = freq27; 53 = dur27; 54 = freq28; 55 = dur28; 56 = freq29; 57 = dur29]
+/ showbackbutton = false
 </survey>
 
 ----- Circular Survey Reponse from Ariel's Resources (loading pictures and text) -----
@@ -958,6 +1376,11 @@ to proceed to the next stage
 / timeout = 20000
 </trial>
 
+<trial BlankTrial> // to be used before catch trial 
+/ timeout = 500
+</trial>
+
+
 <trial CatchTrialpos3> // first catch trial, correct response is 3
 / stimulusframes = [1  = pos4, pos3, pos2, pos1, neg1, neg2, neg3, neg4, response_blank, real, unreal, CatchText1, QuestionNumberReminder]
 / validresponse = (pos4, pos3, pos2, pos1, neg1, neg2, neg3, neg4)
@@ -998,20 +1421,25 @@ to proceed to the next stage
 
 ----- Final Blocks -----
 
-<block firstBlock>
-/ trials = [1=Instruct; 2 = Practice1; 3 = PracticeFlower; 4 = peripheral_response_practice; 5 = PostPractice; 6,8,10,12,14,16,18,20,22 = noreplace(FLOWER); 24 = CatchTrialFlower; 26,28,30,32,34,36,38,40,42,44,46 = noreplace(FLOWER); 48 = CatchTrialFlower; 
-50,52,54,56,58 = noreplace(FLOWER); 7,9,11,13,15,17,19,21,23 = peripheral_response; 25 = CatchTrialpos3; 27,29,31,33,35,37,39,41,43,45,47 = peripheral_response; 49 = CatchTrialneg1; 51,53,55,57,59 = peripheral_response]
+<block Calibration>
+/ trials = [1 = Calibration1; 2 = Calibration2; 3 = Calibration3]
 / preinstructions = (HTML_Instructions,HTML_Consent)
 </block>
 
+
+<block firstBlock>
+/ trials = [1=Instruct; 2 = Practice1; 3 = PracticeFlower; 4 = peripheral_response_practice; 5 = PostPractice; 6,8,10,12,14,16,18,20,22 = noreplace(FLOWER); 24 = BlankTrial; 26,28,30,32,34,36,38,40,42,44,46 = noreplace(FLOWER); 48 = BlankTrial; 
+50,52,54,56,58 = noreplace(FLOWER); 7,9,11,13,15,17,19,21,23 = peripheral_response; 25 = CatchTrialpos3; 27,29,31,33,35,37,39,41,43,45,47 = peripheral_response; 49 = CatchTrialneg1; 51,53,55,57,59 = peripheral_response]
+</block>
+
 <block secondblock>
-/ trials = [1,3,5,7,9,11,13,15,17,19 = noreplace(FLOWER); 2,4,6,8,10,12,14,16,18,20 = peripheral_response; 21 = CatchTrialFlower; 22 = CatchTrialpos2; 23,25,27,29,31,33,35,37,39,41 = noreplace(FLOWER); 24,26,28,30,32,34,36,38,40,42 = peripheral_response;
-43 = CatchTrialFlower; 44 = CatchTrialneg4; 45,47,49,51,53 = noreplace(FLOWER); 46,48,50,52,54 = peripheral_response]
+/ trials = [1,3,5,7,9,11,13,15,17,19 = noreplace(FLOWER); 2,4,6,8,10,12,14,16,18,20 = peripheral_response; 21 = BlankTrial; 22 = CatchTrialpos2; 23,25,27,29,31,33,35,37,39,41 = noreplace(FLOWER); 24,26,28,30,32,34,36,38,40,42 = peripheral_response;
+43 = BlankTrial; 44 = CatchTrialneg4; 45,47,49,51,53 = noreplace(FLOWER); 46,48,50,52,54 = peripheral_response]
 </block>
 
 ----- Final Experiment -----
 
 <expt Final>
-/ blocks = [1 = firstBlock; 2 = secondblock; 3 = survey.DPDR_final]
+/ blocks = [1 = Calibration; 2 = firstBlock; 3 = secondblock; 4 = survey.DPDR_final]
 / postinstructions = (HTML_Complete)
 </expt>
