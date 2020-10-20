@@ -1,0 +1,10 @@
+trialcode	stimulusitem1	x	y	pos2	pos1	neg1	neg2	neg3	neg4
+PracticeFlower	EZ099_L.jpg	0	0	0	0	0	0	0	0
+peripheral_response_practice	response1disks.png	0	0	0	0	0	0	0	0
+PostPractice	You have now completed the practice trial. Press SPACE BAR to begin the real test	0	0	0	0	0	0	0	0
+FLOWER	OneR_1.4.jpg	0	0	0	0	0	0	0	0
+peripheral_response	response1disks.png	0	0	0	0	0	0	0	0
+FLOWER	OneR_1.8.jpg	0	0	0	0	0	-2	0	0
+peripheral_response	response1disks.png	0	0	0	0	0	0	0	0
+FLOWER	PurpleValley_1.8.jpg	0	0	0	0	-1	0	0	0
+peripheral_response	response1disks.png	0	0	0	0	0	0	0	0

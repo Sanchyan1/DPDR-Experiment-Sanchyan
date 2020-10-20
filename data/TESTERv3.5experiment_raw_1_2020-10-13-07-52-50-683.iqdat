@@ -1,0 +1,7 @@
+date	time	group	session	build	trialcode	response	stimulusitem1	trialnum	stimulusonset1	latency	values
+2020-10-13	18:52:50	1	1	6.2.1	FLOWER	0	Blossom_0.2.jpg	1	12	1000	values
+2020-10-13	18:52:50	1	1	6.2.1	peripheral_response	neg3	response1disks.png	2	1	375	values
+2020-10-13	18:52:50	1	1	6.2.1	FLOWER	0	TwoR_1.4.jpg	4	0	1000	values
+2020-10-13	18:52:50	1	1	6.2.1	peripheral_response	pos4	response1disks.png	5	2	352	values
+2020-10-13	18:52:50	1	1	6.2.1	FLOWER	0	OneR_1.0.jpg	7	0	1000	values
+2020-10-13	18:52:50	1	1	6.2.1	peripheral_response	pos4	response1disks.png	8	2	496	values

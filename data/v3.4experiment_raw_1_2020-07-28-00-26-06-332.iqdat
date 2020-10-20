@@ -1,0 +1,4 @@
+date	time	group	session	build	trialcode	response	stimulusitem1	trialnum	stimulusonset1	latency
+2020-07-28	10:26:06	1	1	6.2.1	Calibration1	57	Before beginning, it is important that you:     1. Turn off all light sources in the room and make the room as dark as you can	1	33	2603
+2020-07-28	10:26:06	1	1	6.2.1	Calibration2	57	2. Turn up the brightness on your screen to maximum	2	5	3166
+2020-07-28	10:26:06	1	1	6.2.1	Calibration3	Ctrl+'Q'	3. Turn of any colour adjustment modes on your screen/monitor e.g. night mode or blue light filter      Press SPACE BAR to continue once these settings are adjusted	3	5	3999

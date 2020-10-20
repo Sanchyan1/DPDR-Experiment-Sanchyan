@@ -1,0 +1,8 @@
+date	time	group	session	build	trialcode	response	stimulusitem1	trialnum	stimulusonset1	latency
+2020-07-28	10:19:11	1	1	6.2.1	Calibration	57	Before beginning, it is important that you:     1. Turn off all light sources in the room and make the room as dark as you can       2. Turn up the brightness on your screen to maximum      3. Turn of any colour adjustment modes on your screen/monitor e.g. night mode or blue light filter      Press SPACE BAR to continue once these settings are adjusted	1	17	4939
+2020-07-28	10:19:11	1	1	6.2.1	Instruct	57	A series of flowers taken by different cameras will be presented on the screen, and your task is to evaluate how real each picture looks.    Before the real trial, you will be presented with 1 practice trial. It is important to also note there will be a few trials throughout the test that have special (different) instructions.    Please be aware of them.      Press the SPACE BAR to begin practice      Press CTRL + Q anytime throughout the experiment to quit	1	37	10737
+2020-07-28	10:19:11	1	1	6.2.1	Practice1	57	At the beginning of the trial, a picture will flash briefly (similar to that shown below).    Immediately after, you will be asked to rate its realness.       Press SPACE BAR to continue	2	0	3086
+2020-07-28	10:19:11	1	1	6.2.1	PracticeFlower	0	EZ099_L.jpg	3	17	1000
+2020-07-28	10:19:11	1	1	6.2.1	peripheral_response_practice	neg3	response1disks.png	4	4	1668
+2020-07-28	10:19:11	1	1	6.2.1	PostPractice	57	You have now completed the practice trial. Press SPACE BAR to begin the real test	6	18	1296
+2020-07-28	10:19:11	1	1	6.2.1	FLOWER	0	TwoR_0.2.jpg	7	17	1000

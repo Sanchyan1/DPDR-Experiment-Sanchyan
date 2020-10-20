@@ -1,0 +1,65 @@
+trialcode	stimulusitem1	response
+Calibration1	Before beginning, it is important that you:     1. Turn off all light sources in the room and make the room as dark as you can	0
+Calibration2	2. Turn up the brightness on your screen to maximum	0
+Calibration3	3. Turn of any colour adjustment modes on your screen/monitor e.g. night mode or blue light filter      Press SPACE BAR to continue once these settings are adjusted	0
+Instruct	A series of flowers taken by different cameras will be presented on the screen, and your task is to evaluate how real each picture looks.       Before the real trial, you will be presented with 1 practice trial.       There will be a few trials throughout the test that have special instructions. Please click the number they ask for instead of your own input.      Press the SPACE BAR to begin practice      Press CTRL + Q anytime throughout the experiment to quit	0
+Practice1	At the beginning of the trial, a picture will flash briefly (similar to that shown below).    Immediately after, you will be asked to rate its realness.       Press SPACE BAR to continue	0
+PracticeFlower	EZ099_L.jpg	0
+peripheral_response_practice	response1disks.png	0
+PostPractice	You have now completed the practice trial. Press SPACE BAR to begin the real test	0
+FLOWER	TwoY_0.2.jpg	0
+centremouse	response1disks.png	-4
+FLOWER	Blossom_1.0.jpg	0
+centremouse	response1disks.png	-4
+FLOWER	ThreePink_1.4.jpg	0
+centremouse	response1disks.png	-4
+FLOWER	Blossom_1.8.jpg	0
+centremouse	response1disks.png	-4
+FLOWER	White_1.4.jpg	0
+centremouse	response1disks.png	-3
+FLOWER	TwoPink_1.4.jpg	0
+centremouse	response1disks.png	-4
+FLOWER	OneOrange_1.4.jpg	0
+centremouse	response1disks.png	-3
+FLOWER	TwoY_1.4.jpg	0
+centremouse	response1disks.png	-4
+FLOWER	OneR_1.8.jpg	0
+centremouse	response1disks.png	-3
+BlankTrial	0	-3
+CatchTrialpos3	response1disks.png	-3
+centremouse	response1disks.png	-3
+FLOWER	Blossom_1.4.jpg	0
+centremouse	response1disks.png	-4
+FLOWER	TwoR_1.8.jpg	0
+centremouse	response1disks.png	-3
+FLOWER	TwoY_1.8.jpg	0
+centremouse	response1disks.png	-4
+FLOWER	PurpleValley_1.8.jpg	0
+centremouse	response1disks.png	-3
+FLOWER	TwoR_0.2.jpg	0
+centremouse	response1disks.png	-4
+FLOWER	OneOrange_1.8.jpg	0
+centremouse	response1disks.png	-3
+FLOWER	PurpleValley_0.2.jpg	0
+centremouse	response1disks.png	-4
+FLOWER	OneR_1.0.jpg	0
+centremouse	response1disks.png	-3
+FLOWER	OneR_1.4.jpg	0
+centremouse	response1disks.png	-4
+FLOWER	Blossom_0.6.jpg	0
+centremouse	response1disks.png	-3
+FLOWER	ThreePink_0.6.jpg	0
+centremouse	response1disks.png	-4
+BlankTrial	0	-4
+CatchTrialneg1	response1disks.png	-4
+centremouse	response1disks.png	-4
+FLOWER	OneOrange_0.6.jpg	0
+centremouse	response1disks.png	-4
+FLOWER	ThreePink_1.0.jpg	0
+centremouse	response1disks.png	-3
+FLOWER	White_0.6.jpg	0
+centremouse	response1disks.png	-4
+FLOWER	TwoPink_0.2.jpg	0
+centremouse	response1disks.png	-3
+FLOWER	TwoY_0.6.jpg	0
+centremouse	response1disks.png	-4

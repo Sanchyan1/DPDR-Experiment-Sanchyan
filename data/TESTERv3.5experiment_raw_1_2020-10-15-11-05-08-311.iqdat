@@ -1,0 +1,7 @@
+trialcode	stimulusitem1	x	y	pos2	pos1	neg1	neg2	neg3	neg4
+FLOWER	TwoY_0.6.jpg	0	0	0	0	0	0	0	0
+peripheral_response	response1disks.png	0	0	0	0	0	0	0	0
+FLOWER	TwoY_1.4.jpg	0	0	0	0	-1	0	0	0
+peripheral_response	response1disks.png	0	0	0	0	0	0	0	0
+FLOWER	TwoY_1.0.jpg	0	0	0	1	0	0	0	0
+peripheral_response	response1disks.png	0	0	0	0	0	0	0	0
